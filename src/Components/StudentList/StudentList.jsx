@@ -78,7 +78,7 @@ export const StudentList = () => {
   function onChange(event) {
     setSearch(event.target.value);
   }
-  // console.log("52", search);
+  console.log("81", data);
 
   if (loadData("isLogin") === false || loadData("isLogin") === null) {
     return <Navigate to="/login" />;

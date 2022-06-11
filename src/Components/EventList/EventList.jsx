@@ -60,7 +60,6 @@ export const EventList = () => {
       .catch((err) => console.log(err));
   }
 
-  console.log("186", registerbox);
   console.log("187", data);
 
   if (loadData("isLogin") === false || loadData("isLogin") === null) {
