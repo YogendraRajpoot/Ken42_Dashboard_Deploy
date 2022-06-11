@@ -35,9 +35,7 @@ export const StudentList = () => {
   const [studentCount, setStudentcount] = useState("");
 
   useEffect(() => {
-    return () => {
-      getdata();
-    };
+    getdata();
   }, []);
   const getdata = () => {
     fetch("./db.json")
