@@ -50,25 +50,27 @@ export const StudentList = () => {
     if (param === "term") {
       fetch("./db.json")
         .then((res) => res.json())
-        .then((res) =>
+        .then((res) => {
           setData(
             res.studentlist.sort((a, b) => {
               return a.term - b.term;
             })
-          )
-        )
+          );
+          setStudentcount(res.studentlist.length);
+        })
         .catch((err) => console.log(err));
     }
     if (param === "year") {
       fetch("./db.json")
         .then((res) => res.json())
-        .then((res) =>
+        .then((res) => {
           setData(
             res.studentlist.sort((a, b) => {
               return a.year - b.year;
             })
-          )
-        )
+          );
+          setStudentcount(res.studentlist.length);
+        })
         .catch((err) => console.log(err));
     }
   }

@@ -39,9 +39,7 @@ export const EventList = () => {
   const [studentCount, setStudentcount] = useState("");
 
   useEffect(() => {
-    return () => {
-      getdata();
-    };
+    getdata();
   }, []);
   const getdata = () => {
     fetch("./event.json")
@@ -56,7 +54,10 @@ export const EventList = () => {
     console.log("51");
     fetch("./event.json")
       .then((res) => res.json())
-      .then((res) => setData(res.event.filter((d) => d.status === param)))
+      .then((res) => {
+        setData(res.event.filter((d) => d.status === param));
+        setStudentcount(res.event.length);
+      })
       .catch((err) => console.log(err));
   }
 
