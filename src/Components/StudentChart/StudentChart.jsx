@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import styled from "styled-components";
 import { loadData } from "../../Utils/localStorage";
-import { PieChart, Pie } from "recharts";
+// import { PieChart, Pie } from "recharts";
 
 const CardContainer = styled.div`
   // display: none;
@@ -44,14 +44,14 @@ export const StudentChart = () => {
     return <Navigate to="/login" />;
   }
   // console.log("52", search);
-  const data01 = [
-    { name: "Group A", value: 400 },
-    { name: "Group B", value: 300 },
-    { name: "Group C", value: 300 },
-    { name: "Group D", value: 200 },
-    { name: "Group E", value: 278 },
-    { name: "Group F", value: 189 },
-  ];
+  // const data01 = [
+  //   { name: "Group A", value: 400 },
+  //   { name: "Group B", value: 300 },
+  //   { name: "Group C", value: 300 },
+  //   { name: "Group D", value: 200 },
+  //   { name: "Group E", value: 278 },
+  //   { name: "Group F", value: 189 },
+  // ];
 
   return (
     <div
@@ -118,7 +118,7 @@ export const StudentChart = () => {
                 <br />
                 <h4>Name :- {d.name}</h4>
                 <div>
-                  <PieChart width={300} height={400}>
+                  {/* <PieChart width={300} height={400}>
                     <Pie
                       dataKey="value"
                       isAnimationActive={false}
@@ -129,7 +129,7 @@ export const StudentChart = () => {
                       fill="#8884d8"
                       label
                     />
-                  </PieChart>
+                  </PieChart> */}
                 </div>
               </div>
             );
